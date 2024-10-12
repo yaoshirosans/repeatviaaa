@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Latar belakang hitam untuk kontras dengan GIF */
+    color: #fff; /* Warna teks putih untuk keterbacaan */
+    overflow: hidden; /* Mencegah scroll */
+}
+
+.container {
+    width: 100vw; /* Lebar penuh */
+    height: 100vh; /* Tinggi penuh */
+    position: relative; /* Agar posisi footer di bawah GIF */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: absolute; /* Agar header tetap di atas GIF */
+    top: 20px; /* Jarak dari atas */
+    left: 50%;
+    transform: translateX(-50%); /* Pusatkan header */
+    z-index: 10; /* Agar header di atas GIF */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff; /* Warna judul putih */
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #fff; /* Warna deskripsi putih */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Pusatkan konten secara vertikal */
+    height: 100%; /* Mengisi tinggi penuh */
+}
+
+.gif-container {
+    position: relative; /* Agar item GIF dapat disesuaikan */
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+}
+
+.gif-item {
+    position: absolute; /* Agar item GIF bisa menutupi layar */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; /* Flexbox untuk menyesuaikan gambar dan deskripsi */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-item img {
+    width: 100%; /* Membuat GIF responsif */
+    height: auto; /* Menghindari distorsi */
+}
+
+.gif-item p {
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #fff; /* Warna deskripsi putih */
+    position: absolute; /* Agar teks tetap di atas gambar */
+    bottom: 20px; /* Jarak dari bawah */
+    left: 50%;
+    transform: translateX(-50%); /* Pusatkan deskripsi */
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+    border-radius: 5px; /* Sudut membulat */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+    position: absolute; /* Agar footer tetap di bawah */
+    bottom: 20px; /* Jarak dari bawah */
+    left: 50%;
+    transform: translateX(-50%); /* Pusatkan footer */
+}
